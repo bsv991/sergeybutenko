@@ -2,9 +2,9 @@ package ua.hillel.poker;
 
 import static ua.hillel.logger.Logger.RESET;
 
-public class ServeDeck {
+public class DeckServe {
     private static final int noOfPlayers = 4;
-    private static final String[] deck = ShuffleDeck.shuffleDeck();
+    private static final String[] deck = DeckShuffle.shuffleDeck();
 
     public static void serveDeck() {
         int count = 0;

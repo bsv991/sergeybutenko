@@ -1,6 +1,6 @@
 package ua.hillel.poker;
 
-public class CreateDeck {
+public class DeckCreate {
     public static int noOfCards = 52;
     private static final String[] deck = new String[noOfCards];
 

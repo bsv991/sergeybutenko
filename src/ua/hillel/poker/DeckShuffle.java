@@ -3,10 +3,10 @@ package ua.hillel.poker;
 import java.util.Arrays;
 import java.util.Random;
 
-import static ua.hillel.poker.CreateDeck.noOfCards;
+import static ua.hillel.poker.DeckCreate.noOfCards;
 
-public class ShuffleDeck {
-    private static final String[] deck = CreateDeck.createDeck();
+public class DeckShuffle {
+    private static final String[] deck = DeckCreate.createDeck();
 
     public static String[] shuffleDeck() throws DeckOfCardIsWrongException {
         boolean a = Arrays.asList(deck).isEmpty();
