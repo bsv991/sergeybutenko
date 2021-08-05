@@ -8,6 +8,7 @@ public class Logger {
     public static final String INFO = "INFO";
     public static final String WARN = "WARN";
     public static final String ERROR = "ERROR";
+    public static  String RESET = "\u001B[0m";
 
     public enum levelDebug {
         DEBUG("\u001B[34m"),
@@ -27,7 +28,7 @@ public class Logger {
 
     }
 
-    public static void startLogging(String action, String massage) {
+    public static void log(String action, String massage) {
         switch (action) {
             case "DEBUG":
                 System.out.println(levelDebug.DEBUG.getColor() + DEBUG + " : " + massage);
@@ -47,9 +48,9 @@ public class Logger {
     }
 
     public static void main(String[] args) {
-        startLogging(DEBUG, "DEBUG massage");
-        startLogging(INFO, "INFO massage");
-        startLogging(WARN, "WARN massage");
-        startLogging(ERROR, "ERROR massage");
+        log(DEBUG, "DEBUG massage");
+        log(INFO, "INFO massage");
+        log(WARN, "WARN massage");
+        log(ERROR, "ERROR massage");
     }
 }
