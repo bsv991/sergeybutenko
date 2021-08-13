@@ -1,6 +1,9 @@
-package ua.hillel.collections;
+package hillel.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class CollectionsDuplicateRemove {
     public static void main(String[] args) {

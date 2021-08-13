@@ -1,4 +1,4 @@
-package ua.hillel.logger;
+package hillel.logger;
 
 /**
  * HomeWork 7

@@ -1,4 +1,4 @@
-package ua.hillel.collections;
+package hillel.collections;
 
 import java.util.HashMap;
 

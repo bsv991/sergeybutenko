@@ -1,9 +1,9 @@
-package ua.hillel.poker;
+package hillel.poker;
 
 import java.util.Arrays;
 import java.util.Random;
 
-import static ua.hillel.poker.DeckCreate.noOfCards;
+import static hillel.poker.DeckCreate.noOfCards;
 
 public class DeckShuffle {
     private static final String[] deck = DeckCreate.createDeck();
