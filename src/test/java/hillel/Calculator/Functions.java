@@ -1,4 +1,4 @@
-package ua.hillel.Calculator;
+package hillel.Calculator;
 
 public class Functions {
     int c;

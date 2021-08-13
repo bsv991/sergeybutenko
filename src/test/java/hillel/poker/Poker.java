@@ -1,4 +1,4 @@
-package ua.hillel.poker;
+package hillel.poker;
 
 public class Poker {
 

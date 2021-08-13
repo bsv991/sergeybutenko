@@ -1,6 +1,6 @@
-package ua.hillel.poker;
+package hillel.poker;
 
-import static ua.hillel.logger.Logger.RESET;
+import static hillel.logger.Logger.RESET;
 
 public class DeckServe {
     private static final int noOfPlayers = 4;

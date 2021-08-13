@@ -1,4 +1,6 @@
-package ua.hillel.collections;
+package hillel.collections;
+
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
