@@ -34,8 +34,5 @@ public class TestLogin {
     @Parameters("login")
     public void testParametersFromOutside (String login) {
         System.out.println("Parameters From Outside :" + login);
-
     }
-
-
 }
