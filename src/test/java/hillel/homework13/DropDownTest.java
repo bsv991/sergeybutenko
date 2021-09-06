@@ -14,7 +14,6 @@ public class DropDownTest extends BaseTest {
         WebElement from = driver.findElement(By.className("dropdown"));
         WebElement secondaryDrop = driver.findElement(By.className("secondary-dropdown"));
         WebElement secondaryMenu = driver.findElement(By.xpath("//ul[@class='dropdown-menu secondary']"));
-        Actions actions = new Actions(driver);
         actions.moveToElement(from).moveToElement(secondaryDrop).moveToElement(secondaryMenu).click().perform();
         String textTo = driver.findElement(By.xpath("//div[@class='jumbotron secondary-clicked']/h1")).getText();
         Assert.assertEquals(textTo, "Secondary Page");
