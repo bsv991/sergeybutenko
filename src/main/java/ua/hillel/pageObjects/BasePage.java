@@ -10,7 +10,7 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
-    private JavascriptExecutor javascriptExecutor;
+    protected JavascriptExecutor javascriptExecutor;
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;
@@ -18,20 +18,20 @@ public class BasePage {
         actions = new Actions(driver);
     }
 
-    protected void setValue (WebElement element, String value) {
+    protected void setValue(WebElement element, String value) {
         element.clear();
         element.sendKeys(value);
     }
 
-    protected void click (WebElement element) {
+    protected void click(WebElement element) {
         element.click();
     }
 
-    protected String getMassage (WebElement element) {
+    protected String getMassage(WebElement element) {
         return element.getText();
     }
 
-    protected void moveTo (Actions actions, WebElement element) {
+    protected void moveTo(Actions actions, WebElement element) {
         actions.moveToElement(element);
     }
 }

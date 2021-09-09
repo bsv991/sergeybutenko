@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChallengingDomPage extends BasePage {
@@ -19,9 +20,7 @@ public class ChallengingDomPage extends BasePage {
     @FindBy(css = ".columns.large-2 .success.button")
     private WebElement successButton;
 
-    @FindAll({
-            @FindBy(tagName = "tr")
-    })
+    @FindBy(css = "tr > td:nth-child(4)")
     private List<WebElement> tableRows;
 
     public ChallengingDomPage(WebDriver driver) {
@@ -44,12 +43,11 @@ public class ChallengingDomPage extends BasePage {
         return new ChallengingDomPage(driver);
     }
 
-    public void iterationGetValue() {
-        for (WebElement row : tableRows) {
-            List<WebElement> cells = row.findElements(By.cssSelector("td:nth-child(4)"));
-            for (WebElement cell : cells) {
-                System.out.println("Value = " + cell.getText());
-            }
+    public List<String> getTableData() {
+        List<String> data = new ArrayList<>();
+        for (WebElement tableRow : tableRows) {
+            data.add(tableRow.getText());
         }
+        return data;
     }
 }
