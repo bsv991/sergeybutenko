@@ -13,33 +13,49 @@ public class MainPage extends BasePage {
     private WebElement geolocationLink;
 
     @FindBy(linkText = "Challenging DOM")
-    private WebElement geolocationChallenging;
+    private WebElement geolocationChallengingLink;
 
     @FindBy(linkText = "Hovers")
-    private WebElement hoversPage;
+    private WebElement hoversPageLink;
+
+    @FindBy(linkText = "File Download")
+    private WebElement downloadLink;
+
+    @FindBy(linkText = "File Upload")
+    private WebElement uploadLink;
 
     public MainPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public LoginPage goToLoginPage () {
+    public LoginPage goToLoginPage() {
         click(loginLink);
         return new LoginPage(driver);
     }
 
-    public GeolocationPage goToGeolocationPage () {
+    public GeolocationPage goToGeolocationPage() {
         click(geolocationLink);
         return new GeolocationPage(driver);
     }
 
-    public ChallengingDomPage goToChallengingDomPage () {
-        click(geolocationChallenging);
+    public ChallengingDomPage goToChallengingDomPage() {
+        click(geolocationChallengingLink);
         return new ChallengingDomPage(driver);
     }
 
-    public HoversPage goToHoversPage () {
-        click(hoversPage);
+    public HoversPage goToHoversPage() {
+        click(hoversPageLink);
         return new HoversPage(driver);
+    }
+
+    public DownloadPage goToFileDownload() {
+        click(downloadLink);
+        return new DownloadPage(driver);
+    }
+
+    public UploadPage goToFileUpload() {
+        click(uploadLink);
+        return new UploadPage(driver);
     }
 }

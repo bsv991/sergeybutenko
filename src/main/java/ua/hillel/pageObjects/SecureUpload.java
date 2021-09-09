@@ -5,16 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SecurePage extends BasePage {
-    @FindBy(id = "flash")
-    private WebElement massageLogin;
+public class SecureUpload extends BasePage {
+    @FindBy(id = "content")
+    private WebElement massage;
 
-    public SecurePage(WebDriver driver) {
+    public SecureUpload(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public String getMassageLoginPage () {
-       return getMassage(massageLogin);
+    public String getMassage () {
+        return getMassage(massage);
     }
 }
