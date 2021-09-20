@@ -9,19 +9,20 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import static com.codeborne.selenide.Selenide.$;
 
 public class DownloadUploadFileTest extends BaseTest {
     @Test
-    public void testFileDownloadUpload() throws FileNotFoundException, InterruptedException {
+    public void testFileDownloadUpload() throws FileNotFoundException {
         String text = "11111111";
         openAppSelenide("download");
         File file = new DownloadPage().downloadFiles();
-        checkFileDirectory("some-file.txt");
+        Path paths = Paths.get(file.getAbsolutePath());
         try {
-            Files.write(Paths.get("target/451f7510-78ac-413e-ae0d-d6636ccc6eb2/" + "some-file.txt"), text.getBytes(), StandardOpenOption.APPEND);
+            Files.write(paths, text.getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
             System.out.println(e);
         }
