@@ -15,6 +15,7 @@ public class StoreApiTest {
         System.out.println("Response getInventory: " + getInventory());
     }
 
+
     @Test
     public void testSetOrder() throws IOException {
         Order order = order(9);
