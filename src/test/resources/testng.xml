@@ -2,9 +2,8 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
-        <parameter name="login" value="TestLogin"></parameter>
         <classes>
-            <class name="hillel.homework11.TestLogin" />
+            <class name="hillel.homework18.StoreApiTest" />
         </classes>
     </test>
 </suite>
