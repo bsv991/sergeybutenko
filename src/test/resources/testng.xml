@@ -4,6 +4,7 @@
     <test name="test" >
         <classes>
             <class name="hillel.homework13.HoversTest" />
+            <class name="hillel.homework12.ChallengingDomTest" />
         </classes>
     </test>
 </suite>
