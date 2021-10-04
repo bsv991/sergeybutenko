@@ -1,5 +1,6 @@
 package ua.hillel.pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,6 +18,7 @@ public class HoversPage extends MainPage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Get users names")
     public List<String> getUserNames() {
         List<String> data = new ArrayList<>();
         for (WebElement x : elementList) {
