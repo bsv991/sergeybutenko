@@ -3,6 +3,7 @@
 <suite name="Suite1" verbose="1" >
     <test name="test" >
         <classes>
+            <class name="hillel.homework11.TestLogin" />
             <class name="hillel.homework13.HoversTest" />
             <class name="hillel.homework12.ChallengingDomTest" />
         </classes>
