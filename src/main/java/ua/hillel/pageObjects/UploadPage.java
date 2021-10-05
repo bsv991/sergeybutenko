@@ -1,5 +1,6 @@
 package ua.hillel.pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,11 +20,13 @@ public class UploadPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("File upload")
     public UploadPage fileUpload(String name) {
         fileUpload.sendKeys(new File(name).getAbsolutePath());
         return new UploadPage(driver);
     }
 
+    @Step("Click submit file upload")
     public SecureUpload clickSubmit () {
         click(fileSubmit);
         return new SecureUpload (driver);

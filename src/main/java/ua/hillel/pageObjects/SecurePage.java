@@ -1,5 +1,6 @@
 package ua.hillel.pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,7 @@ public class SecurePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Get massage login page")
     public String getMassageLoginPage () {
        return getMassage(massageLogin);
     }

@@ -1,5 +1,6 @@
 package ua.hillel.pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,7 @@ public class DownloadPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Download files")
     public void downloadFiles() {
         click(recoveryCodesLink);
     }

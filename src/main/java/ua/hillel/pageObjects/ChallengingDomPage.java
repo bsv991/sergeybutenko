@@ -1,5 +1,6 @@
 package ua.hillel.pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,21 +29,23 @@ public class ChallengingDomPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step("Click button first")
     public ChallengingDomPage clickButtonFirst() {
         click(button);
         return new ChallengingDomPage(driver);
     }
-
+    @Step("Click button alert")
     public ChallengingDomPage clickButtonAlert() {
         click(alertButton);
         return new ChallengingDomPage(driver);
     }
 
+    @Step("Click button success")
     public ChallengingDomPage clickButtonSuccess() {
         click(successButton);
         return new ChallengingDomPage(driver);
     }
-
+    @Step("Get table data")
     public List<String> getTableData() {
         List<String> data = new ArrayList<>();
         for (WebElement tableRow : tableRows) {
